@@ -78,11 +78,11 @@ def fetch_generated_data(data_dir, output_dir):
     feat_file = os.path.join(output_dir, 'ABIDE_BASC064_features.npz')
     X_features = np.load(feat_file)['a']
 
-    feat_file_autism = os.path.join(output_dir, 'generated_data_asd.csv')
+    feat_file_autism = os.path.join(output_dir, 'generated_data_asd_300.csv')
     X_features_autism = pd.read_csv(feat_file_autism, sep=',', header=None, skiprows=1)
     X_features_autism = X_features_autism.drop(X_features_autism.columns[0], axis=1)
 
-    feat_file_control = os.path.join(output_dir, 'generated_data_tc.csv')
+    feat_file_control = os.path.join(output_dir, 'generated_data_tc_300.csv')
     X_features_control = pd.read_csv(feat_file_control, sep=',', header=None, skiprows=1)
     X_features_control = X_features_control.drop(X_features_control.columns[0], axis=1)
 
